@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        
+        <title>Cody's Game Dev Projects</title>
+
+    </head>
+    <body>
+        
+        <nav class="navbar">
+            <div class="brand">
+                My Developer Logs
+            </div>
+            
+            <a href="#" class="togglebutton">
+                <span class = "bar"></span>
+                <span class = "bar"></span>
+                <span class = "bar"></span>
+            </a>
+            <div class="navbarlinks"> 
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <div class="dropdown">
+                        <li>
+                            <a href="mainprojects.html" >Projects</a>
+                            <div class="dropdowncontent">
+                                <ul>
+                                    <li><a href="#">Spong</a></li>
+                                    <li><a href="project-platformer.html">0Velocity</a></li>
+                                    <li><a href="#">Other Games</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </div>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <header>
+            <h1>Spong</h1>
+            <h2>Made for the Roslyn High School Hackathon</h2>
+        </header>
+        <div class="container">
+            
+            <h3>Concept</h3>
+            <p>For the hackathon, I needed something that would be easy and quick to make, and that was already fun, as I didn't have the time
+                to come up with an original idea and make prototypes to test if it's fun. However, the game also had to be complex enough to 
+                allow for other ideas to come in as well. That is why I chose the game Pong, as I already had a unique spin(pun intended) in mind 
+                for the game. The basic idea was to add the ability to rotate the paddles while playing.
+            </p>
+            
+            <div class = "divider"></div>
+
+            <div class="row">
+                <div class="column-left"> 
+                    <h3>Design</h3>
+                    <p>First step was to make the design in Unity and set up all of the sprites to be able to collide by giving each sprite a 2DCollider
+                        and a Rigidbody 2D, as well as make the ball bouncy with the bouncy material so that it bounces off walls.
+                    </p>
+                </div>
+                <div class="column-right">
+                    <img src="Design.png">
+                    <br/>
+                    <caption>Rectangles added for paddles, circle for ball</caption>
+                    <img src="BouncyMat.png">
+                    <br/>
+                    <caption>Bouncy material for the ball. Bounce set to 1.08 so it goes slightly faster every time it bounces</caption>
+                </div>
+            </div>
+
+            <div class = "divider"></div>
+
+            <div class="row">
+                <div class="column-left"> 
+                    <h3>Gameplay Scripts</h3>
+                    <p>
+                        The coding part of game development, which in Unity is done in C#. These scripts will be for the gameplay of the game 
+                        (i.e. controls)
+                    </p>
+                </div>
+                <div class="column-right">
+                    <img src="BallScript.png">
+                    <br/>
+                    <caption>How the ball sets its direction and moves at the start of the match and when a player scores</caption>
+                    <br/>
+                    <img src="PlayerScript.png">
+                    <br/>
+                    <caption>Player 1 and 2 script, player controls(player controls are in github ReadMe)</caption>
+                </div>
+            </div>
+
+            <div class = "divider"></div>
+
+
+            <div class="row">
+                <div class="column-left"> 
+                    <h3>Logic Manager</h3>
+                    <p>The logic manager is a separate sprite that cannot be interacted with, and controls the score, keeping track of who won, 
+                        updating the UI, and restarting the scene.
+                    </p>
+                </div>
+                <div class="column-right">
+                    <img src="UIScore.png">
+                    <br/>
+                    <caption>Score UI</caption>
+                    <br/>
+                    <img src="LogicScript.png">
+                    <br/>
+                    <caption>Script for the Logic Manager. This is also called on by the Ball Script</caption>
+                </div>
+            </div>
+            <div class = "divider"></div>
+
+            <div class="row">
+                <div class="column-left"> 
+                    <h3>Finishing Touches</h3>
+                    <p>
+                        Since I had a little bit of time left, I decided to give the player a new ability, which is to be able to spin faster 
+                        at the cost of movement. This was in the Player movement script, and as you can see, it requires the shift key nearest to 
+                        each player to be held down. In addition, I also added a Pause Menu and a Main Menu so that it looks more polished, and I also 
+                        messed around with the new Unity Text, TextMeshPro.
+                    </p>
+                </div>
+                <div class="column-right">
+                    <img src="MainMenu.png">
+                    <br/>
+                    <caption>Main Menu</caption>
+                    <br/>
+                    <img src="PauseMenu.png">
+                    <br/>
+                    <caption>Pause Menu</caption>
+                    <br/>
+                    <img src="MainMenuScript.png">
+                    <br/>
+                    <caption>Main Menu Script</caption>
+                    <br/>
+                    <img src="PauseMenuScript.png">
+                    <br/>
+                    <caption>Pause Menu Script</caption>
+                    <br/>
+                </div>
+
+            </div>
+            <div class = "divider"></div>
+            <p>Of course, you don't have to take it from me, play the game and judge for yourself!</p>
+            <p><a href="https://drive.google.com/file/d/1-plSfAJaTxbQVH_N1p1rVSsRsuR0WgCv/view?usp=sharing">Spong</a></p>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
